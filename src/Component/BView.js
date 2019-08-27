@@ -100,8 +100,8 @@ const BView = ({ state }) => {
           <InputBase
             type="password"
             id="inputID"
+            placeholder="password"
             onChange={onChangeHandler}
-            placeholder="비밀번호 입력"
             onKeyDown={onKeyDownHandler}>
           </InputBase>
 

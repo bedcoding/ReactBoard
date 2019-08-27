@@ -1,17 +1,15 @@
 import React, { Component } from "react";
-import BoardHeader from "./BoardHeader";
 import Board from "./Board";
 import Login from "./Login";
 import { connect } from "react-redux";
 import axios from "axios";
+// import "./css/board.css";
 
 class Main extends Component {
-  pageChange = () => {
-    return !this.props.didlogin ? (
-      <Login state={this.props} />
-    ) : (
-        <Board state={this.props} />
-      );
+  pageChange = () => { 
+    return !this.props.didlogin 
+    ? (<Login state={this.props}/>) 
+    : (<Board state={this.props}/>);
   };
 
   async componentDidMount() {
@@ -31,7 +29,6 @@ class Main extends Component {
   render() {
     return (
       <div id="page-top">
-        <BoardHeader />
         {this.pageChange()}
       </div>
     );

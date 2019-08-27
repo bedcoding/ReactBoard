@@ -1,17 +1,25 @@
+#page-top {
+    background-color: LightGray
+}
+
 .board{
     margin-left: 200px;
-    margin-right: 200px
+    margin-right: 200px;
 }
 
 #boardlist {
-    height: 200px;
-    
+    height: 100px;
 }
 
 #boardview {
-    height: 200px;
+    height: 100px;
+    
 }
 
-#boardwrite1{
+#boardwrite{
+    height: 100px;
+}
+
+.boardbottom {
     height: 200px;
 }

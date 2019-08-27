@@ -1,7 +1,6 @@
 import React from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import Button from '@material-ui/core/Button';
 
 const BItem = ({ state, item, index }) => {
     const index_ = index
@@ -16,8 +15,8 @@ const BItem = ({ state, item, index }) => {
     return (
         <TableRow onClick={onClickHandler}>
             <TableCell> {idx} </TableCell>
-            <TableCell> {writer} </TableCell>
             <TableCell> {subject} </TableCell>
+            <TableCell> {writer} </TableCell>
         </TableRow>
     );
 };

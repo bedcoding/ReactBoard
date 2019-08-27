@@ -1,10 +1,8 @@
 .write {
-    background: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /* 그림자 */
-    margin: 0 auto; /* 페이지 중앙 정렬 */
-    margin-bottom: 200px;
-    padding: 100px;
- 
+   border-radius: 25px;
+   border: 2px solid gray;
+   padding: 40px;
+   background-color: white;
  }
  
  @media ( max-width: 480px ) {
@@ -17,12 +15,7 @@
  .textArea {
     overflow-y: scroll;
     width: 100%; /* 정렬하려는 요소의 넓이를 반드시 지정 */
-    margin: 0 auto;
- 
- }
- 
- .textField {
- 
+    margin: 0 auto; 
  }
  
  .button {

@@ -1,6 +1,5 @@
 import React from "react";
 import "./css/freelancer.css";
-import "./css/boardHeader.css";
 
 const BoardHeader = () => {
   return (
@@ -11,8 +10,7 @@ const BoardHeader = () => {
       <div className="container">
         <a
           className="navbar-brand js-scroll-trigger"
-          href="http://localhost:3000"
-        >
+          href="http://localhost:3000">
           5조 게시판
         </a>
 
@@ -21,24 +19,21 @@ const BoardHeader = () => {
             <li className="nav-item mx-0 mx-lg-1">
               <a
                 className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                href="#boardlist"
-              >
-                게시판목록
+                href="#boardlist">
+                리스트
               </a>
             </li>
             <li className="nav-item mx-0 mx-lg-1">
               <a
                 className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                href="#boardview"
-              >
+                href="#boardview">
                 글보기
               </a>
             </li>
             <li className="nav-item mx-0 mx-lg-1">
               <a
                 className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                href="#boardwrite"
-              >
+                href="#boardwrite">
                 글쓰기
               </a>
             </li>

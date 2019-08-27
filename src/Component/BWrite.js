@@ -1,11 +1,8 @@
 import React from "react";
 import axios from "axios";
-
-import { withStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import TextareaAutosize from "@material-ui/core/TextareaAutosize";
+import { Button, InputBase } from "@material-ui/core/";
 import "./css/BWrite.css";
+
 
 const BWrite = ({ state }) => {
   let { context, password, subject } = state.boardWrite;
@@ -27,6 +24,7 @@ const BWrite = ({ state }) => {
       default:
         break;
     }
+
     state.update(subject, context, password);
   }
 
@@ -98,14 +96,44 @@ const BWrite = ({ state }) => {
     document.getElementById("inputID2").value = '';
     document.getElementById("validation-outlined-input").value = '';
 
+    // 이것도 초기화
+    subject = "";
+    context = "";
+    password = "";
+    state.update(subject, context, password);  // 이거 다시 안해주니까 공백일때 버튼 누르면 이전값이 들어감
+
     state.loadList(list);
   }
 
   return (
-    <div className="write" id="boardwrite">
+    <div className="write">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <TextareaAutosize
+      <div class="container-fluid bg-grey">
+        <h1 className="text-center"> 글쓰기 </h1> <br/>
+        <div className="row">
+          <textarea
+            className="form-control"
+            id="inputID1"
+            aria-label="maximum height"
+            name="subject"
+            onChange={onChangehandler}
+            rows="1"
+          />
+          
+          <textarea
+            className="form-control"
+            id="inputID2"
+            aria-label="maximum height"
+            name="context"
+            onChange={onChangehandler}
+            rows="15">
+          </textarea>
+        </div>
+      </div>
+
+
+      {/* <TextareaAutosize
         rows={1}
         id="inputID1"
         aria-label="maximum height"
@@ -123,49 +151,31 @@ const BWrite = ({ state }) => {
         className="textArea"
         name="context"
         onChange={onChangehandler}
-      />
+      /> */}
 
       <div className="contents-bottom">
-        <ValidationTextField
-          label="password"
-          type="password"
-          required
-          placeholder="password"
+        <InputBase
           id="validation-outlined-input"
+          type="password"
+          placeholder="password"
           className="textField"
           name="password"
+          
           onChange={onChangehandler}
           onKeyDown={onKeyDownHandler}
         />
-        
+
         <Button
-          variant="contained"
-          size="large"
-          color="primary"
-          className="button"
-          onClick={onClickhandle}>
+            className="button"
+            variant="contained"
+            color="secondary"
+            onClick={onClickhandle}>
           저장
         </Button>
+
       </div>
     </div>
   );
 };
-
-const ValidationTextField = withStyles({
-  root: {
-    "& input:valid + fieldset": {
-      borderColor: "green",
-      borderWidth: 2
-    },
-    "& input:invalid + fieldset": {
-      borderColor: "red",
-      borderWidth: 2
-    },
-    "& input:valid:focus + fieldset": {
-      borderLeftWidth: 6,
-      padding: "4px !important" // override inline-style
-    }
-  }
-})(TextField);
 
 export default BWrite;
