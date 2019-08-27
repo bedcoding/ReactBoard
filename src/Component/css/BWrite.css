@@ -1,0 +1,35 @@
+.write {
+    background: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /* 그림자 */
+    margin: 0 auto; /* 페이지 중앙 정렬 */
+    margin-bottom: 200px;
+    padding: 100px;
+ 
+ }
+ 
+ @media ( max-width: 480px ) {
+    #write {
+      float: none;
+      width: auto;
+    }
+ }
+ 
+ .textArea {
+    overflow-y: scroll;
+    width: 100%; /* 정렬하려는 요소의 넓이를 반드시 지정 */
+    margin: 0 auto;
+ 
+ }
+ 
+ .textField {
+ 
+ }
+ 
+ .button {
+    margin: 1 auto;
+ }
+ 
+ .contents-bottom {
+    text-align:center;
+    margin-top: 20px;
+ }

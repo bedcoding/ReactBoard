@@ -1,0 +1,10 @@
+.bigbox {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;
+  }
+
+  .button2 {
+      text-align: center;
+      margin-top: 50px; 
+  }

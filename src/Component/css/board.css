@@ -1,0 +1,17 @@
+.board{
+    margin-left: 200px;
+    margin-right: 200px
+}
+
+#boardlist {
+    height: 200px;
+    
+}
+
+#boardview {
+    height: 200px;
+}
+
+#boardwrite1{
+    height: 200px;
+}
